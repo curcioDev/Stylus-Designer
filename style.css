@@ -226,6 +226,20 @@ body * {
   transition: all 0.3s ease;
 }
 
+/* Borda padrão (modo escuro) */
+#profile img {
+  border: 4px solid #ff1a1a;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff1a1a88;
+  transition: all 0.3s ease;
+}
+
+/* Modo claro */
+.light #profile img {
+  border: 4px solid #222;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
 #profile p {
   font-weight: 500;
   line-height: 24px;
@@ -349,12 +363,16 @@ ul {
 }
 
 .linkedin .IconLink {
+  width: 150px; /* tamanho mais proporcional */
+  height: auto;
   position: absolute;
-  left: 16px;
+  left: -20px;
   top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.67rem;
+  transform: translateY(-50%) rotate(0.5deg); /* centraliza e aplica leve rotação */
+  object-fit: contain;
+  filter: drop-shadow(0 0 2px black);
 }
+
 .insta {
   display: block;
   text-align: center;
