@@ -220,6 +220,10 @@ body * {
 
 #profile img {
   width: 112px;
+  border: 2px solid #ff1a1a;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff1a1a88;
+  transition: all 0.3s ease;
 }
 
 #profile p {
@@ -554,24 +558,30 @@ footer {
 .video-container {
   margin: 24px auto 32px auto;
   padding: 16px;
-  border: 2px solid #ff4d4d;
+  border: 2px solid #ff1e1e; /* vermelho mais forte */
   border-radius: 12px;
   max-width: 100%;
-  background: rgba(255, 0, 0, 0.05);
+  background: linear-gradient(
+    135deg,
+    #4d0000,
+    #1a0000
+  ); /* vermelho escuro com preto */
   backdrop-filter: blur(4px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 0 100px rgba(255, 0, 0, 0.3); /* leve glow vermelho */
 }
 
 .video-caption {
-  font-family: "Poppins", sans-serif; /* Fonte moderna e elegante */
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #ffffff; /* Vermelho mais vibrante */
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px black, -1px -1px 2px black;
   margin-bottom: 12px;
   text-align: center;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
 }
 
 .video-wrapper {
@@ -581,6 +591,7 @@ footer {
   height: 0;
   overflow: hidden;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* leve sombra no player */
 }
 
 .video-wrapper iframe {
@@ -590,4 +601,5 @@ footer {
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  border: none;
 }
