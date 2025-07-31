@@ -363,14 +363,11 @@ ul {
 }
 
 .linkedin .IconLink {
-  width: 150px; /* tamanho mais proporcional */
-  height: auto;
   position: absolute;
-  left: -20px;
+  left: 16px;
   top: 50%;
-  transform: translateY(-50%) rotate(0.5deg); /* centraliza e aplica leve rotação */
-  object-fit: contain;
-  filter: drop-shadow(0 0 2px black);
+  transform: translateY(-50%);
+  font-size: 1.67rem;
 }
 
 .insta {
@@ -424,10 +421,12 @@ ul {
 
 .email .IconEmail {
   position: absolute;
-  left: 16px;
+  left: -35px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.67rem;
+  width: 130px;
+  height: 130px;
 }
 
 .github {
@@ -534,43 +533,12 @@ footer {
   animation: fadeSlideOut 0.4s ease forwards;
 }
 
-.email-texto {
-  display: inline-block;
-  transition: none; /* a gente vai usar keyframes agora */
-}
-
 .fade-in {
   animation: fadeSlideIn 0.3s ease forwards;
 }
 
 .fade-out {
   animation: fadeSlideOut 0.3s ease forwards;
-}
-
-.toast {
-  position: fixed;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #00ffae;
-  color: #000;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 999;
-}
-
-.toast.mostrar {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-10px);
-}
-
-.ativo {
-  transform: scale(0.97);
-  filter: brightness(1.2);
 }
 
 .video-container {
