@@ -329,8 +329,9 @@ ul {
 }
 
 .whatsapp {
+  position: relative;
   display: block;
-  text-align: center;
+  width: 100%;
   padding: 16px 24px;
   margin: 12px 0;
   border-radius: 12px;
@@ -339,16 +340,16 @@ ul {
   text-decoration: none;
   transition: 0.2s ease;
   border: 2px solid #ff1e1e;
-  position: relative;
-  list-style: none;
   background-clip: padding-box;
   backdrop-filter: blur(6px);
   will-change: transform;
+  font-family: "SuaFonteAqui", sans-serif;
+  text-align: center;
 }
 
 .whatsapp:hover {
-  background: rgba(255, 0, 0, 0.1); /* leve vermelho por cima */
-  box-shadow: 0 0 25px rgba(255, 0, 0, 0.3); /* efeito ascendente */
+  background: rgba(255, 0, 0, 0.1);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
   transform: scale(1.03);
 }
 
@@ -358,6 +359,9 @@ ul {
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .youtube {
@@ -447,8 +451,9 @@ ul {
   font-size: 1.67rem;
 }
 .email {
+  position: relative;
   display: block;
-  text-align: center;
+  width: 100%;
   padding: 16px 24px;
   margin: 12px 0;
   border-radius: 12px;
@@ -457,24 +462,26 @@ ul {
   text-decoration: none;
   transition: 0.2s ease;
   border: 2px solid #ff1e1e;
-  position: relative;
-  will-change: transform;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  font-family: "SuaFonteAqui", sans-serif;
 }
 
 .email:hover {
-  background: rgba(255, 0, 0, 0.1); /* leve vermelho por cima */
-  box-shadow: 0 0 25px rgba(255, 0, 0, 0.3); /* efeito ascendente */
+  background: rgba(255, 0, 0, 0.1);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
   transform: scale(1.03);
 }
 
 .email .IconEmail {
   position: absolute;
-  left: -35px;
+  left: 16px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.67rem;
-  width: 130px;
-  height: 130px;
+  font-size: 1.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .github {
