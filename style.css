@@ -625,9 +625,11 @@ footer {
     padding-right: 10px;
   }
   .youtube .texto-youtube,
-  .insta .texto-insta,
   .github .texto-tiktok {
     padding-right: 20px;
+  }
+  .insta .texto-insta {
+    padding-right: 10px;
   }
 }
 
