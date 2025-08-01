@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "GothamBlack";
+  src: url("/fonts/Gotham-Black.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*light mode*/
 
 .light body {
@@ -330,20 +337,19 @@ ul {
 
 .whatsapp {
   position: relative;
-  display: block;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   padding: 16px 24px;
   margin: 12px 0;
   border-radius: 12px;
   background: rgba(255, 0, 0, 0.1);
+  border: 2px solid #ff1e1e;
   color: white;
   text-decoration: none;
   transition: 0.2s ease;
-  border: 2px solid #ff1e1e;
-  background-clip: padding-box;
   backdrop-filter: blur(6px);
-  will-change: transform;
-  font-family: "SuaFonteAqui", sans-serif;
   text-align: center;
 }
 
@@ -354,29 +360,38 @@ ul {
 }
 
 .whatsapp .IconZap {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.95rem;
+  flex-shrink: 0;
+  font-size: 1.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.youtube {
-  display: block;
+.whatsapp .texto-zap {
+  flex: 1 1 auto;
   text-align: center;
+  padding-right: 40px;
+  font-family: "GothamBlack", sans-serif;
+}
+
+.youtube {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   padding: 16px 24px;
   margin: 12px 0;
   border-radius: 12px;
   background: rgba(255, 0, 0, 0.1);
+  border: 2px solid #ff1e1e;
   color: white;
   text-decoration: none;
   transition: 0.2s ease;
-  border: 2px solid #ff1e1e;
-  position: relative;
-  will-change: transform;
+  backdrop-filter: blur(6px);
+  text-align: center;
+  box-sizing: border-box;
+  min-height: auto;
 }
 
 .youtube:hover {
@@ -386,55 +401,81 @@ ul {
 }
 
 .youtube .IconYoutube {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.95rem;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.youtube .texto-youtube {
+  flex: 1 1 auto;
+  text-align: center;
+  padding-right: 40px;
+  font-family: "GothamBlack", sans-serif;
 }
 
 .linkedin {
-  display: block;
-  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   padding: 16px 24px;
   margin: 12px 0;
   border-radius: 12px;
   background: rgba(255, 0, 0, 0.1);
+  border: 2px solid #ff1e1e;
   color: white;
   text-decoration: none;
   transition: 0.2s ease;
-  border: 2px solid #ff1e1e;
-  position: relative;
-  will-change: transform;
+  backdrop-filter: blur(6px);
+  text-align: center;
+  box-sizing: border-box;
+  min-height: auto;
 }
 
 .linkedin:hover {
-  background: rgba(255, 0, 0, 0.1); /* leve vermelho por cima */
-  box-shadow: 0 0 25px rgba(255, 0, 0, 0.3); /* efeito ascendente */
+  background: rgba(255, 0, 0, 0.1);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
   transform: scale(1.03);
 }
 
 .linkedin .IconLink {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.67rem;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkedin .texto-link {
+  flex: 1 1 auto;
+  text-align: center;
+  padding-right: 40px;
+  font-family: "GothamBlack", sans-serif;
 }
 
 .insta {
-  display: block;
-  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   padding: 16px 24px;
   margin: 12px 0;
   border-radius: 12px;
   background: rgba(255, 0, 0, 0.1);
+  border: 2px solid #ff1e1e;
   color: white;
   text-decoration: none;
   transition: 0.2s ease;
-  border: 2px solid #ff1e1e;
-  position: relative;
-  will-change: transform;
+  backdrop-filter: blur(6px);
+  text-align: center;
+  box-sizing: border-box;
+  min-height: auto;
 }
 
 .insta:hover {
@@ -444,59 +485,88 @@ ul {
 }
 
 .insta .iconInsta {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.67rem;
-}
-.email {
-  position: relative;
-  display: block;
-  width: 100%;
-  padding: 16px 24px;
-  margin: 12px 0;
-  border-radius: 12px;
-  background: rgba(255, 0, 0, 0.1);
-  color: white;
-  text-decoration: none;
-  transition: 0.2s ease;
-  border: 2px solid #ff1e1e;
-  text-align: center;
-  backdrop-filter: blur(6px);
-  font-family: "SuaFonteAqui", sans-serif;
-}
-
-.email:hover {
-  background: rgba(255, 0, 0, 0.1);
-  box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
-  transform: scale(1.03);
-}
-
-.email .IconEmail {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.95rem;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.github {
-  display: block;
+.insta .texto-insta {
+  flex: 1 1 auto;
   text-align: center;
+  padding-right: 40px;
+  font-family: "GothamBlack", sans-serif;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 16px 24px;
+  margin: 12px 0;
+  border-radius: 12px;
+  border: 2px solid #ff1e1e;
+  background: rgba(255, 0, 0, 0.1);
+  color: white;
+  text-decoration: none;
+  backdrop-filter: blur(6px);
+  text-align: center;
+  min-height: 64px;
+  transition: 0.2s ease;
+}
+
+.icon-wrapper {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding-left: 25px;
+}
+
+.email:hover {
+  background: rgba(255, 0, 0, 0.1); /* leve vermelho por cima */
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.3); /* efeito ascendente */
+  transform: scale(1.03);
+}
+
+.email .icon-wrapper .IconEmail {
+  height: 140px;
+  width: 140px;
+  object-fit: contain;
+  transform: translateX(-12px);
+}
+
+.texto-email {
+  flex: 1 1 auto;
+  text-align: center;
+  padding-right: 40px;
+  font-family: "GothamBlack", sans-serif;
+  display: inline;
+}
+
+.github {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   padding: 16px 24px;
   margin: 12px 0;
   border-radius: 12px;
   background: rgba(255, 0, 0, 0.1);
+  border: 2px solid #ff1e1e;
   color: white;
   text-decoration: none;
   transition: 0.2s ease;
-  border: 2px solid #ff1e1e;
-  position: relative;
-  will-change: transform;
+  backdrop-filter: blur(6px);
+  text-align: center;
+  box-sizing: border-box;
+  min-height: auto;
 }
 
 .github:hover {
@@ -506,11 +576,19 @@ ul {
 }
 
 .github .IconGit {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.67rem;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.github .texto-tiktok {
+  flex: 1 1 auto;
+  text-align: center;
+  padding-right: 40px;
+  font-family: "GothamBlack", sans-serif;
 }
 
 footer {
@@ -537,6 +615,17 @@ footer {
 
   .light body {
     background-image: url(assets/bg-desktop-light.jpg);
+  }
+}
+
+@media (min-width: 280px) and (max-width: 700px) {
+  .whatsapp .texto-zap,
+  .youtube .texto-youtube,
+  .github .texto-tiktok,
+  .linkedin .texto-link,
+  .instagram .texto-insta,
+  .email .texto-email {
+    padding-right: 10px;
   }
 }
 
